@@ -19,14 +19,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'wombat256.vim'
-Plugin 'shougo/deoplete.nvim'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-Plugin 'lervag/vimtex'
-Plugin 'dpelle/vim-languagetool'
 call vundle#end()
 filetype indent plugin on
 
@@ -37,8 +29,6 @@ autocmd BufWinEnter * silent NERDTreeMirror
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " color scheme:
-colorscheme wombat256mod
-let g:airline_theme='wombat'
 
 "automatically deletes all trailing whitespace and newlines at end of file on
 "save
@@ -67,22 +57,22 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#disable_auto_complete = 1
-inoremap <expr> <C-n>  deoplete#manual_complete()
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#disable_auto_complete = 1
+" inoremap <expr> <C-n>  deoplete#manual_complete()
 
-" set vimtex:
-let g:tex_flavor = "latex"
-call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'tex': g:vimtex#re#deoplete
-      \})
-let g:vimtex_view_general_viewer = 'evince'
-let g:vimtex_grammar_textidote = {
-            \ 'jar': '/opt/textidote/textidote.jar',
-            \ 'args': '--check en --ignore sh:seclen,sh:nobreak',
-            \}
-let g:vimtex_quickfix_mode=0
-autocmd FileType tex nnoremap <silent> <F6> :VimtexCompile<CR>
+" " set vimtex:
+" let g:tex_flavor = "latex"
+" call deoplete#custom#var('omni', 'input_patterns', {
+"       \ 'tex': g:vimtex#re#deoplete
+"       \})
+" let g:vimtex_view_general_viewer = 'evince'
+" let g:vimtex_grammar_textidote = {
+"             \ 'jar': '/opt/textidote/textidote.jar',
+"             \ 'args': '--check en --ignore sh:seclen,sh:nobreak',
+"             \}
+" let g:vimtex_quickfix_mode=0
+" autocmd FileType tex nnoremap <silent> <F6> :VimtexCompile<CR>
 
 
 "set languagetool
