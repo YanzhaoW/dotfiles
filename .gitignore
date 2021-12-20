@@ -1,6 +1,7 @@
 /*
 !/.gitignore
 !/.tmux.conf
+!/.vimrc
 !/.config/
 /.config/*
 !/.config/alacritty/
