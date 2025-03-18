@@ -3,3 +3,5 @@
 !tmux/
 !.gitignore
 !readme.md
+!setup.sh
+!shared_config.zsh
