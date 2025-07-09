@@ -1,17 +1,12 @@
-[[ -n $TMUX ]] && export TERM="xterm-256color"
-
 export EDITOR='nvim'
-
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions clipboard web-search)
-source $ZSH/oh-my-zsh.sh
 
 unsetopt autopushd
 unsetopt pushdignoredups
 #keybindings
 bindkey '^[[Z' autosuggest-accept
 
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
@@ -29,8 +24,25 @@ function resetenv(){
     export DISPLAY="`tmux show-env | sed -n 's/^DISPLAY=//p'`"
 }
 
+function send(){
+    local desfile="$HOME/.buffer_files/"
+    if [ -z "$(ls -A ${desfile})" ]; then
+    else
+        echo "folder is not empty. cleaning all files..."
+        rm -rf ${desfile}/*
+    fi
+    if (( $# >0 ))
+    then
+        for i
+        do
+            rsync -av $i ${desfile}
+        done
+    fi
+}
+
 # CMake options:
 export CMAKE_GENERATOR=Ninja
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 export PATH
 typeset -U path
