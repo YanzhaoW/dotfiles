@@ -1,12 +1,13 @@
 export EDITOR='nvim'
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions clipboard web-search)
 
-unsetopt autopushd
-unsetopt pushdignoredups
+source $ZSH/oh-my-zsh.sh
+
 #keybindings
 bindkey '^[[Z' autosuggest-accept
 
-source $ZSH/oh-my-zsh.sh
+unsetopt autopushd
+unsetopt pushdignoredups
 
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
