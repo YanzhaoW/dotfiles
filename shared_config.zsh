@@ -30,6 +30,8 @@ function resetenv(){
     export DISPLAY="`tmux show-env | sed -n 's/^DISPLAY=//p'`"
 }
 
+export PATH=${HOME}/.local/bin:$PATH
+
 function send(){
     local desfile="$HOME/.buffer_files/"
     if [ -z "$(ls -A ${desfile})" ]; then
