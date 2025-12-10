@@ -1,4 +1,5 @@
 export EDITOR='nvim'
+export XDG_CONFIG_HOME=${HOME}/.config
 
 if which nvim > /dev/null 2>&1; then
     export MANPAGER='nvim +Man!'
