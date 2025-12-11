@@ -5,7 +5,7 @@ if which nvim > /dev/null 2>&1; then
     export MANPAGER='nvim +Man!'
 fi
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions clipboard web-search)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions web-search)
 
 source $ZSH/oh-my-zsh.sh
 
