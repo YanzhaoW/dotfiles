@@ -2,6 +2,7 @@
 
 !git/*
 !tmux/
+!tmux/*
 !.gitignore
 !readme.md
 !setup.sh
