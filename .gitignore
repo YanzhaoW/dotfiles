@@ -1,5 +1,6 @@
 *
 
+!git/*
 !tmux/
 !.gitignore
 !readme.md

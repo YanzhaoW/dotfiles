@@ -16,3 +16,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # git clone https://github.com/zpm-zsh/clipboard.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/clipboard
 ```
+
+### git setup
+
+```bash
+git config --global core.excludesFile ~/.config/git/ignore
+```
