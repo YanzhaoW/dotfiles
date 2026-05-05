@@ -3,6 +3,8 @@
 !git/*
 !tmux/
 !tmux/*
+!htop/
+!htop/*
 !.gitignore
 !readme.md
 !setup.sh
